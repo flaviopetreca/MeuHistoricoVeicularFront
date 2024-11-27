@@ -1,14 +1,21 @@
 .login-container {
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
-  }
-  
-  .full-width {
-    width: 100%;
-  }
-  
-  mat-card {
-    padding: 20px;
-  }
-  
+  width: 100%;
+  max-width: 400px;
+  margin: auto; /* Centraliza horizontalmente */
+}
+
+.full-width {
+  width: 100%;
+}
+
+mat-card {
+  padding: 20px;
+}
+
+
+.full-page-container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  min-height: 100vh; /* Garante altura total da página */
+}
