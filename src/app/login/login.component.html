@@ -5,7 +5,7 @@
         <mat-card-title>Login</mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
           <mat-form-field appearance="outline" class="full-width">
             <mat-label>E-mail, Telefone, Usuário ou CPF</mat-label>
             <input matInput formControlName="identifier" placeholder="Digite aqui" />

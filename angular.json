@@ -16,6 +16,7 @@
             "outputPath": "dist/meu-historico-veicular",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "aot": false,
             "polyfills": [
               "zone.js"
             ],

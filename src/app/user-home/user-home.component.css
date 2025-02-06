@@ -1,0 +1,36 @@
+.user-menu {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .user-info {
+    cursor: pointer;
+    background: #f0f0f0;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+  
+  .menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  input {
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px;
+  }
+  

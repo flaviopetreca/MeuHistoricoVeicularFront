@@ -1,0 +1,19 @@
+<div class="user-menu">
+    <!-- Nome do Usuário e Ícone do Menu -->
+    <div class="user-info" (click)="toggleEdit()">
+      <span>{{ user.name }}</span>
+      <button class="menu-btn">▼</button>
+    </div>
+  
+    <!-- Formulário de Edição -->
+    <div *ngIf="isEditing" class="dropdown">
+      <label>Nome:
+        <input type="text" [(ngModel)]="user.name">
+      </label>
+      <label>Email:
+        <input type="email" [(ngModel)]="user.email">
+      </label>
+      <button (click)="saveChanges()">Salvar</button>
+    </div>
+  </div>
+  
