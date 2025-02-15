@@ -1,11 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { CommonModule } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-user-home',
-  imports: [CommonModule, BrowserAnimationsModule],
+  imports: [CommonModule],
   templateUrl: './user-home.component.html',
   styleUrl: './user-home.component.css'
 })
