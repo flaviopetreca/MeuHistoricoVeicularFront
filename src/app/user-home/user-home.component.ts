@@ -1,6 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { CommonModule } from '@angular/common';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-home',
@@ -10,10 +12,14 @@ import { CommonModule } from '@angular/common';
 })
 export class UserHomeComponent {
   private userService = inject(UserService);
+  private authService = inject(AuthService);
   user = {
     name: ''
   };
   isEditing = false;
+
+   constructor( private router: Router) {
+    }
 
   ngOnInit(): void {
     this.buscarUsuario();
@@ -41,4 +47,13 @@ export class UserHomeComponent {
       }
     );}
   }
+
+  logout(): void {
+    // Limpar o localStorage ou qualquer dado de sessão
+    localStorage.removeItem('usuarioCpfOuCelular'); // Exemplo de remoção do item no localStorage
+    this.authService.logout() 
+    // Redirecionar para a tela de login
+    this.router.navigate(['/login']);
+  }
+
 }

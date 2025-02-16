@@ -55,4 +55,8 @@ export class LoginComponent {
        
     );
   }
+
+  navegarParaCadastro(): void {
+    this.router.navigate(['/cadastro']); // Ajuste para a rota correta da sua página de cadastro
+  }
 }
