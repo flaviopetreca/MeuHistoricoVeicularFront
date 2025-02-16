@@ -50,8 +50,10 @@ export class LoginComponent {
         console.log('Login bem-sucedido:', response);
         this.router.navigate(['/UserHome']);
       },
-      (error: any) => 
+      (error: any) => {
+        alert('Usuário ou senha inválida!');
         this.authService.logout() 
+      }
        
     );
   }

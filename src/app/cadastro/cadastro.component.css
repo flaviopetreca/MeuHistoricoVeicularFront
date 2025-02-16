@@ -1,35 +1,75 @@
-/* Centralizar o formulário */
-.container {
-    width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Estilizar os inputs */
-  input {
-    width: 100%;
+/* Estilos principais */
+
+a {
+  cursor: pointer; /* Muda o ponteiro para uma mãozinha */
+  text-decoration: none; /* Remove o sublinhado padrão do link */
+  color: #007bff; /* Cor do texto do link (você pode ajustar conforme preferir) */
+}
+
+a:hover {
+  text-decoration: underline; /* Adiciona sublinhado quando o mouse passa por cima */
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 8px;
+}
+
+.auth-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.auth-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.auth-footer p {
+  font-size: 14px;
+}
+
+.auth-footer a {
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: bold;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  .auth-container {
     padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
   }
-  
-  /* Botão estilizado */
-  button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 15px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+
+  .auth-card {
+    padding: 15px;
   }
-  
-  button:hover {
-    background: #0056b3;
+
+  .auth-title {
+    font-size: 20px;
   }
-  
+}

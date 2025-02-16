@@ -4,6 +4,10 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { UserService } from '../services/user.service';
 import { Usuario } from '../models/usuario';
 import { CommonModule } from '@angular/common';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-cadastro',
@@ -11,7 +15,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.css'],
   imports: [
-    ReactiveFormsModule, CommonModule 
+    ReactiveFormsModule,
+    CommonModule,
+     MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatCardModule
   ]
 })
 export class CadastroComponent {
@@ -39,7 +48,11 @@ export class CadastroComponent {
       );
      
       console.log('Cadastro realizado!', this.cadastroForm.value);
-      // this.router.navigate(['/login']); // Redireciona para o login após o cadastro
+      this.router.navigate(['/login']); // Redireciona para o login após o cadastro
     }
+  }
+
+  navegarParaLogin(): void {
+    this.router.navigate(['/login']);
   }
 }
